@@ -1,10 +1,18 @@
 import React from "react";
 
-function CategoryFilter() {
+const CategoryFilter = ({onCategorySelected }) => {
+  const handleCategorySelected = (e) => {
+    console.log('selected',e.target.value);
+    onCategorySelected(e.target.value);
+  };
   return (
-    <div className="categories">
-      <h5>Category filters</h5>
-      {/* render <button> elements for each category here */}
+    <div>
+    <label htmlFor="category"> Category</label>
+    <select name="category" id="category" onChange={handleCategorySelected}>
+    <option value="all">All</option>
+    <option value="code">Code</option>
+    <option value="groceries">Groceries</option>
+    </select>
     </div>
   );
 }
