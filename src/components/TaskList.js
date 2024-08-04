@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
-import Task from "./Task"
+import Task from  "../components/Task"
+import CategoryFilter from './CategoryFilter'
 
 
 function TaskList({tasks, handleDelete}) {
@@ -16,3 +17,4 @@ function TaskList({tasks, handleDelete}) {
 
 
 export default TaskList;
+  
